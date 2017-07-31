@@ -1,0 +1,4 @@
+'.source.webfocus':
+	'editor':
+	  'tabLength': 2
+	  'commentStart': '-* '

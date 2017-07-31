@@ -1,0 +1,137 @@
+'scopeName': 'source.webfocus'
+'name': 'webfocus'
+'fileTypes': [
+  'fex'
+  'mas'
+]
+'patterns': [
+  {
+    'include': '#comments'
+  }
+  {
+    'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+    'name': 'constant.numeric.webfocus'
+  }
+  {
+    'match': '\\b(TABLE+\\s+FILE?|GRAPH(\\s+FILE)?|TABLEF(\\s+FILE)?|MODIFY(\\s+FILE)?|DEFINE(\\s+FILE)?|MATCH(\\s+FILE)?|JOIN(\\s+FILE)?|CREATE(\\s+SYNONYM)?|APP|END)\\b'
+    'name': 'keyword.core.webfocus'
+  }
+  {
+    'match': '\\b(FROM|SUM|PRINT|LIST|COUNT|SET|HOLD|RETYPE|REPLOT)\\b'
+    'name': 'keyword.verb.webfocus'
+  }
+  {
+    'match': '^-\.*'
+    'name': 'keyword.control.webfocus'
+  }
+  {
+    'match': '\\b(WHERE|AS|OVER|OR|LIKE|BETWEEN|AND|HAVING|RECORDLIMIT)\\b'
+    'name': 'keyword.other.webfocus'
+  }
+  {
+    'match': '\\b(BY|ACROSS|TOTAL|LOWEST|HIGHEST)\\b'
+    'name': 'keyword.order.webfocus'
+  }
+  {
+    'match': '\\b(NE|EQ|CONTAINS|GE|GT|LT|LE|TO|IN|IF|THEN|ELSE|(IS\\s+)?(NOT\\s+)?MISSING)\\b'
+    'name': 'keyword.other.case.webfocus'
+  }
+  {
+    'match': '\\*'
+    'name': 'keyword.operator.star.webfocus'
+  }
+  {
+    'match': '-|\\+|/'
+    'name': 'keyword.operator.math.webfocus'
+  }
+  {
+    'match': '\\|\\|'
+    'name': 'keyword.operator.concatenator.webfocus'
+  }
+  {
+    'match': 'ACCEPT|ACTUAL|ALIAS|CRFILE|CRKEY|CRSEG|DATASET|DESC|FIELD|FIELDNAME|FIELDTYPE|FILE|FILENAME|FORMAT|INDEX|MISSING|PARENT|SEGMENT|SEGNAME|SEGTYPE|SUFFIX|TITLE|USAGE'
+    'name': 'keyword.mfd.webfocus'
+  }
+  {
+    'match': '\\b(ASQ|AVE|CNT|CT|DST|FST|LST|MAX|MDE|MDN|MIN|PCT|RNK|RPCT|ST|SUM|TOT)\\.'
+    'name': 'support.function.prefix.webfocus'
+  }
+  {
+    'comment': 'List of webfocus built-in functions'
+    'match': '\\b(CLSDDREC|FEXERR|GETCOOKI|GETHEADR|GETPDS|MVSDYNAM|PUTCOOKI|PUTDDREC|SLEEP|CALLDOS|DMOD|FGETEVN|GETUSER|ISALIVE)'
+    'name': 'support.function.system.webfocus'
+  }
+  {
+    'match': '\\b(ABS|ASIS|BAR|CHKPCK|DMOD|FMOD|IMOD|EXP|EXPN|FMLCAP|FMLFOR|FMLINFO|FMLLIST|INT|LOG|MIRR|NORMSDST|NORMSINV|PRDNOR|PRDUNI|RDNORM|RDUNIF|SQRT|XIRR|ATODBL|EDIT|FPRINT|FTOA|HEXBYT|ITONUM|ITOPACK|ITOZ|PCKOUT|PTOA|TSTOPACK|UFMT|XTPACK)'
+    'name': 'support.function.numeric.webfocus'
+  }
+  {
+    'comment': 'List of webfocus99 built-in functions from http://infocenter.informationbuilders.com/wf80/index.webfocusp?topic=%2Fpubdocs%2Freporting%2FUsingFunctions%2Fsource%2Ftopic13.htm'
+    'match': '\\b(DATEADD|DATECVT|DATEDIF|DATEMOV|DATETRAN|DPART|FIQTR|FIYR|FIYYQ|HMASK|TODAY|AYM|AYMD|CHGDAT|DA|DADMY|DADYM|DAMDY|DAMYD|DAYDM|DAYMD|DMY|MDY|YMD|DOWK|DOWKL|DT|DTDMY|DTDYM|DTMDY|DTMYD|DTYDM|DTYMD|GREGDT|JULDAT|YM|ADD|DAY|HADD|HCNVRT|HDATE|HDIFF|HDTTM|HEXTR|HGETC|HHMMSS|HINPUT|HMASK|HMIDNT|HNAME|HPART|HSETPT|HTIME|HTMTOTS|TIMETOTS|Initial_HHMMSS|Initial_TODAY|JULIAN|MONTH|QUARTER|SETMDY|SUB|TODAY|TODAY2|WEEKDAY|YEAR)'
+    'name': 'support.function.date.webfocus'
+  }
+  {
+    'match': '\\b(ARGLEN|ASIS|BITSON|BITVAL|BYTVAL|CHKFMT|CTRAN|CTRFLD|EDIT|GETTOK|LCWORD|LCWORD2|LCWORD3|LJUST|LOCASE|OVRLAY|PARAG|POSIT|REVERSE|RJUST|SOUNDEX|SPELLNM|SQUEEZ|STRIP|STRREP|SUBSTR|TRIM|UPCASE|LENV|LOCASV|POSITV|SUBSTV|TRIMV|UPCASV|DECODE|FIND|LAST|EDIT|LOOKUP)'
+    'name': 'support.function.string.webfocus'
+  }
+  {
+    'include': '#strings'
+  }
+]
+'repository':
+  'comments':
+    'patterns': [
+      {
+        'begin': '^-\\*'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.webfocus'
+        'end': '$'
+        'name': 'comment.line.dash-slash.webfocus'
+      }
+    ]
+  'strings':
+    'patterns': [
+      {
+        'captures':
+          '1':
+            'name': 'punctuation.definition.string.begin.webfocus'
+          '2':
+            'name': 'punctuation.definition.string.end.webfocus'
+        'comment': 'this is faster than the next begin/end rule since sub-pattern will match till end-of-line and webfocus files tend to have very long lines.'
+        'match': '(\')[^\'\\\\]*(\')'
+        'name': 'string.quoted.single.webfocus'
+      }
+      {
+        'begin': '\''
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.webfocus'
+        'end': '\''
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.webfocus'
+        'name': 'string.quoted.single.webfocus'
+      }
+      {
+        'captures':
+          '1':
+            'name': 'punctuation.definition.string.begin.webfocus'
+          '2':
+            'name': 'punctuation.definition.string.end.webfocus'
+        'comment': 'this is faster than the next begin/end rule since sub-pattern will match till end-of-line and webfocus files tend to have very long lines.'
+        'match': '(")[^"#]*(")'
+        'name': 'string.quoted.double.webfocus'
+      }
+      {
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.webfocus'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.webfocus'
+        'name': 'string.quoted.double.webfocus'
+      }
+    ]

@@ -1,0 +1,672 @@
+# webfocus snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+
+'.source.webfocus':
+  'ABS':
+    'description': "Calculate Absolute Value"
+    'prefix': "ABS"
+    'body': "ABS($1input_value)"
+  'ADD':
+    'description': "Add a given number of days to a date"
+    'prefix': "ADD"
+    'body': "ADD($1date,value)"
+  'ARGLEN':
+    'description': "Measure the Length of a String"
+    'prefix': "ARGLEN"
+    'body': "ARGLEN($1inlength, infield, outfield)"
+  'ASIS':
+    'description': "Distinguish Between Space and Zero"
+    'prefix': "ASIS"
+    'body': "ASIS($1input_value)"
+  'ATODBL':
+    'description': "Convert an Alphanumeric String to Double-Precision Format"
+    'prefix': "ATODBL"
+    'body': "ATODBL($1infld, length, outfld)"
+  'AYM':
+    'description': "Add or Subtract Months"
+    'prefix': "AYM"
+    'body': "AYM($1indate, months, outfield)"
+  'AYMD':
+    'description': "Add or Subtract Days"
+    'prefix': "AYMD"
+    'body': "AYMD($1indate, days, outfield)"
+  'BAR':
+    'prefix': "BAR"
+    'description': "Produce a Bar Chart"
+    'body': "BAR($1barlength, infield, maxvalue, 'char', outfield)"
+  'BITSON':
+    'description': "Determine If a Bit Is On or Off"
+    'prefix': "BITSON"
+    'body': "BITSON($1bitnumber, infield, outfield)"
+  'BITVAL':
+    'description': "Evaluate a Bit String as an Integer"
+    'prefix': "BITVAL"
+    'body': "BITVAL($1source_string, startbit, number, output)"
+  'BYTVAL':
+    'description': "Translate a Character to Decimal"
+    'prefix': "BYTVAL"
+    'body': "BYTVAL($1character, outfield)"
+  'CHGDAT':
+    'description': "Chang How a Date String Displays"
+    'prefix': "CHGDAT"
+    'body': "CHGDAT($1'oldformat', 'newformat', indate, outfield)"
+  'CHKFMT':
+    'description': "Check the Format of a String"
+    'prefix': "CHKFMT"
+    'body': "CHKFMT($1numchar, infield, 'mask', outfield)"
+  'CHKPCK':
+    'description': "Validate a Packed Field"
+    'prefix': "CHKPCK"
+    'body': "CHKPCK($1infield, error, outfield)"
+  'CLSDDREC':
+    'description': "Close All Files Opened by the PUTDDREC Function"
+    'prefix': "CLSDDREC"
+    'body': "CLSDDREC($1output)"
+  'CTRAN':
+    'description': "Translate One Character to Another"
+    'prefix': "CTRAN"
+    'body': "CTRAN($1inlen, infield, decfrm, decto, output)"
+  'CTRFLD':
+    'description': "Center a Character String"
+    'prefix': "CTRFLD"
+    'body': "CTRFLD($1infield, inlength, outfield)"
+  'DADMY':
+    'description': "Convert a date in day-month-year format to an integer"
+    'prefix': "DADMY"
+    'body': "DADMY($1indate, outfield)"
+  'DADYM':
+    'description': "Convert a date in day-year-month format to an integer"
+    'prefix': "DADYM"
+    'body': "DADYM($1indate, outfield)"
+  'DAMDY':
+    'description': "Convert a date in month-day-year format to an integer"
+    'prefix': "DAMDY"
+    'body': "DAMDY($1indate, outfield)"
+  'DAMYD':
+    'description': "Convert a date in month-year-day format to an integer"
+    'prefix': "DAMYD"
+    'body': "DAMYD($1indate, outfield)"
+  'DATEADD':
+    'description': "Add or Subtract a Date Unit to or From a Date"
+    'prefix': "DATEADD"
+    'body': "DATEADD($1date, 'component', increment)"
+  'DATECVT':
+    'description': "Convert the Format of a Date"
+    'prefix': "DATECVT"
+    'body': "DATECVT($1date, 'in_format', output)"
+  'DATEDIF':
+    'description': "Find the Difference Between Two Dates"
+    'prefix': "DATEDIF"
+    'body': "DATEDIF($1from_date, to_date, 'component')"
+  'DATEMOV':
+    'description': "Move a Date to a Significant Point"
+    'prefix': "DATEMOV"
+    'body': "DATEMOV($1date, 'move_point')"
+  'DATETRAN':
+    'description': "Format Dates in International Formats"
+    'prefix': "DATETRAN"
+    'body': "DATETRAN($1indate, '(intype), '([formatops]), 'lang', outlen, output)"
+  'DAY':
+    'description': "Extract the Day of the Month From a Date"
+    'prefix': "DAY"
+    'body': "DAY($1date)"
+  'DAYDM':
+    'description': "Convert a date in year-day-month format to an integer"
+    'prefix': "DAYDM"
+    'body': "DAYDM($1indate, outfield)"
+  'DAYMD':
+    'description': "Convert a date in year-month-day format to an integer"
+    'prefix': "DAYMD"
+    'body': "DAYMD($1indate, outfield)"
+  'DECODE':
+    'description': "Decode Values"
+    'prefix': "DECODE"
+    'body': "DECODE $1fieldname(code1 result1 code2 result2...[ELSE default ]);'"
+  'DMOD':
+    'description': "Calculate the Remainder From a Division"
+    'prefix': "DMOD"
+    'body': "DMOD($1dividend, divisor, outfield)"
+  'DMY':
+    'description': "Calculate the Difference Between Two Dates"
+    'prefix': "DMY"
+    'body': "DMY($1begin, end)"
+  'DOWK':
+    'prefix': "DOWK"
+    'body': "DOWK($1indate, outfield)"
+    'description': "Find the Day of the Week"
+  'DOWKL':
+    'prefix': "DOWKL"
+    'body': "DOWKL($1indate, outfield)"
+    'description': "Find the Day of the Week"
+  'DPART':
+    'prefix': "DPART"
+    'body': "DPART($1datevalue, 'component', output)"
+    'description': "Extract a Component From a Date"
+  'DTDMY':
+    'prefix': "DTDMY"
+    'body': "DTDMY($1number, outfield)"
+    'description': "Convert an integer to a date in day-month-year format"
+  'DTDYM':
+    'prefix': "DTDYM"
+    'body': "DTDYM($1number, outfield)"
+    'description': "Convert an integer to a date in day-year-month format"
+  'DTMDY':
+    'prefix': "DTMDY"
+    'body': "DTMDY($1number, outfield)"
+    'description': "Convert an integer to a date in month-day-year format"
+  'DTMYD':
+    'prefix': "DTMYD"
+    'body': "DTMYD($1number, outfield)"
+    'description': "Convert an integer to a date in month-year-day format"
+  'DTYDM':
+    'prefix': "DTYDM"
+    'body': "DTYDM($1number, outfield)"
+    'description': "Convert an integer to a date in year-day-month format"
+  'DTYMD':
+    'prefix': "DTYMD"
+    'body': "DTYMD($1number, outfield)"
+    'description': "Convert an integer to a date in year-month-day format"
+  'EDIT':
+    'prefix': "EDIT"
+    'body': "EDIT($1fieldname, 'mask')"
+    'description': "Extract or Add Characters"
+  'EDIT':
+    'prefix': "EDIT#"
+    'body': "EDIT($1fieldname)"
+    'description': "Convert from number to char or char to number"
+  'EXP':
+    'prefix': "EXP"
+    'body': "EXP($1power, outfield)"
+    'description': "Raise to the Nth Power"
+  'EXPN':
+    'prefix': "EXPN"
+    'body': "EXPN($1input_value)"
+    'description': "Evaluate a Number in Scientific Notation"
+  'FEXERR':
+    'prefix': "FEXERR"
+    'body': "FEXERR($1error_num,output)"
+    'description': "Retrieve an Error Message"
+  'FGETENV':
+    'prefix': "FGETENV"
+    'body': "FGETENV($1envnamelen, envname, outfieldlen, outfldformat)"
+    'description': "Retrieve the Value of an Environment Variable"
+  'FIND':
+    'prefix': "FIND"
+    'body': "FIND($1fieldname [AS dbfield] IN file)"
+    'description': "Verify the Existence of a Value in a Data Source"
+  'FIQTR':
+    'prefix': "FIQTR"
+    'body': "FIQTR($1inputdate, lowcomponent, startmonth- startday- yrnumbering, output)"
+    'description': "Get the Financial Quarter"
+  'FIYR':
+    'prefix': "FIYR"
+    'body': "FIYR($1inputdate, lowcomponent, startmonth- startday- yrnumbering, output)"
+    'description': "Get the Financial Year"
+  'FIYYQ':
+    'prefix': "FIYYQ"
+    'body': "FIYYQ($1inputdate, lowcomponent, startmonth- startday- yrnumbering, output)"
+    'description': "Convert a Calendar Date to a Financial Date"
+  'FMLCAP':
+    'prefix': "FMLCAP"
+    'body': "FMLCAP($1fieldname,output)"
+    'description': "Retrieve FML Hierarchy Captions"
+  'FMLFOR':
+    'prefix': "FMLFOR"
+    'body': "FMLFOR($1output)"
+    'description': "Retrieve FML Tag Values"
+  'FMLINFO':
+    'prefix': "FMLINFO"
+    'body': "FMLINFO($1'FOR_value', output)"
+    'description': "Return FOR Values"
+  'FMLLIST':
+    'prefix': "FMLLIST"
+    'body': "FMLLIST($1'A4096V')"
+    'description': "Return an FML Tag List"
+  'FMOD':
+    'prefix': "FMOD"
+    'body': "FMOD($1dividend, divisor, outfield)"
+    'description': "Calculate the Remainder From a Division"
+  'FPRINT':
+    'prefix': "FPRINT"
+    'body': "FPRINT($1input,output)"
+    'description': "Convert Fields to Alphanumeric Format"
+  'FTOA':
+    'prefix': "FTOA"
+    'body': "FTOA($1number, output_format, outfield)"
+    'description': "Convert a Number to Alphanumeric Format"
+  'GETCOOKI':
+    'prefix': "GETCOOKI"
+    'body': "GETCOOKI($1'cookie_name', length)"
+    'description': "Retrieve a Browser Cookie Value"
+  'GETHEADR':
+    'prefix': "GETHEADR"
+    'body': "GETHEADR($1'http_varname', output)"
+    'description': "Retrieve an HTTP Header Variable"
+  'GETTOK':
+    'prefix': "GETTOK"
+    'body': "GETTOK($1infield, inlen, toknum, delim, outlen, outfield)"
+    'description': "Extract a Substring Token"
+  'GETUSER':
+    'prefix': "GETUSER"
+    'body': "GETUSER($1outfield)"
+    'description': "Retrieve a User ID"
+  'GREGDT':
+    'prefix': "GREGDT"
+    'body': "GREGDT($1indate, outfield)"
+    'description': "Convert From Julian to Gregorian Format"
+  'HADD':
+    'prefix': "HADD"
+    'body': "HADD($1datetime, 'componentstring', increment, length, output)"
+    'description': "Increment a Date-Time Value based on 'component'"
+  'HCNVRT':
+    'prefix': "HCNVRT"
+    'body': "HCNVRT($1datetime, format, length, output)"
+    'description': "Convert a Date-Time Value to Alphanumeric Format"
+  'HDATE':
+    'prefix': "HDATE"
+    'body': "HDATE($1datetime, output)"
+    'description': "Convert the Date Portion of a Date-Time Value to a Date Format"
+  'HDIFF':
+    'prefix': "HDIFF"
+    'body': "HDIFF($1end_dt, start_dt, 'componentstring', output)"
+    'description': "Find the Number of Units Between Two Date-Time Values"
+  'HDTTM':
+    'prefix': "HDTTM"
+    'body': "HDTTM($1date, length, output)"
+    'description': "Convert a Date Value to a Date-Time Value"
+  'HEXBYT':
+    'prefix': "HEXBYT"
+    'body': "HEXBYT($1input, output)"
+    'description': "Convert a Decimal Integer to a Character"
+  'HEXTR':
+    'prefix': "HEXTR"
+    'body': "HEXTR($1datetime, 'componentstring', length, output)"
+    'description': "Extract Components of a Date-Time Value and Sett Remain Components to Zero"
+  'HGETC':
+    'prefix': "HGETC"
+    'body': "HGETC($1length,output)"
+    'description': "Story the Current Date and Time in a Date-Time Field"
+  'HHMMSS':
+    'prefix': "HHMMSS"
+    'body': "HHMMSS($1outfield)"
+    'description': "Retrieve the Current Time"
+  'HINPUT':
+    'prefix': "HINPUT"
+    'body': "HINPUT($1source_length, 'source_string', output_length, output)"
+    'description': "Convert an Alphanumeric String to a Date-Time Value"
+  'HMASK':
+    'prefix': "HMASK"
+    'body': "HMASK($1source, 'componentstring', input, length, output)"
+    'description': "Extract Date-Time Components and Preserve Remain Components"
+  'HMIDNT':
+    'prefix': "HMIDNT"
+    'body': "HMIDNT($1input,output)"
+    'description': "Sett the Time Portion of a Date-Time Value to Midnight"
+  'HNAME':
+    'prefix': "HNAME"
+    'body': "HNAME($1datetime, 'component', output)"
+    'description': "Retrieve a Date-Time Component in Alphanumeric Format"
+  'HPART':
+    'prefix': "HPART"
+    'body': "HPART($1datetime, 'component', output)"
+    'description': "Retrieve a Date-Time Component as a Numeric Value"
+  'HSETPT':
+    'prefix': "HSETPT"
+    'body': "HSETPT($1datetime, 'component', value, length, output)"
+    'description': "Insert a Component Into a Date-Time Value"
+  'HTIME':
+    'prefix': "HTIME"
+    'body': "HTIME($1length, datetime, output)"
+    'description': "Convert the Time Portion of a Date-Time Value to a Number"
+  'HTMTOTS':
+    'prefix': "HTMTOTS"
+    'body': "HTMTOTS($1time, length, output)"
+    'description': "Convert a Time to a Timestamp"
+  'IMOD':
+    'prefix': "IMOD"
+    'body': "IMOD($1dividend, divisor, outfield)"
+    'description': "Calculate the Remainder From a Division"
+  'INT':
+    'prefix': "INT"
+    'body': "INT($1input_value)"
+    'description': "Find the Greatest Integer"
+  'ITONUM':
+    'prefix': "ITONUM"
+    'body': "ITONUM($1sigbytes, infield, outfield)"
+    'description': "Convert a Large Binary Integer to Double-Precision Format"
+  'ITOPACK':
+    'prefix': "ITOPACK"
+    'body': "ITOPACK($1sigbytes, infield, outfield)"
+    'description': "Convert a Large Binary Integer to Packed-Decimal Format"
+  'ITOZ':
+    'prefix': "ITOZ"
+    'body': "ITOZ($1outlength, number, outfield)"
+    'description': "Convert a Number to Zoned Format"
+  'JULDAT':
+    'prefix': "JULDAT"
+    'body': "JULDAT($1indate, outfield)"
+    'description': "Convert From Gregorian to Julian Format"
+  'JULIAN':
+    'prefix': "JULIAN"
+    'body': "JULIAN($1date)"
+    'description': "Determine the number of elapsed days in the given year up to date"
+  'LCWORD':
+    'prefix': "LCWORD"
+    'body': "LCWORD($1inlength, infield, outfield) '"
+    'description': "Convert a String to Mixed Case"
+  'LCWORD2':
+    'prefix': "LCWORD2"
+    'body': "LCWORD2($1length, source_string, output)"
+    'description': "Convert a String to Mixed Case"
+  'LCWORD3':
+    'prefix': "LCWORD3"
+    'body': "LCWORD3($1length, source_string_with_quote, output)"
+    'description': "Convert a String to Mixed Case"
+  'LENV':
+    'prefix': "LENV"
+    'body': "LENV($1input,output)"
+    'description': "Return the Length of an Alphanumeric Field"
+  'LJUST':
+    'prefix': "LJUST"
+    'body': "LJUST($1inlength, infield, outfield)"
+    'description': "Left,Justify a String"
+  'LOCASE':
+    'prefix': "LOCASE"
+    'body': "LOCASE($1inlength, infield, outfield)"
+    'description': "Convert Text to Lowercase"
+  'LOCASV':
+    'prefix': "LOCASV"
+    'body': "LOCASV($1length, source_string, output)"
+    'description': "Create a Variable Length Lowercase String"
+  'LOG':
+    'prefix': "LOG"
+    'body': "LOG($1input_value)"
+    'description': "Calculate the Natural Logarithm"
+  'LOOKUP':
+    'prefix': "LOOKUP"
+    'body': "LOOKUP($1input,output)"
+    'description': "Retrieve a Value From a Cross-referenced Data Source"
+  'MDY':
+    'prefix': "MDY"
+    'body': "MDY($1begin, end)"
+    'description': "Calculate the Difference Between Two Dates"
+  'MIRR':
+    'prefix': "MIRR"
+    'body': "MIRR($1cashflow, finrate, reinvrate, output)"
+    'description': "Calculate the Modified Internal Return Rate"
+  'MONTH':
+    'prefix': "MONTH"
+    'body': "MONTH($1date)"
+    'description': "Extract the Month From a Date"
+  'NORMSDST':
+    'prefix': "NORMSDST"
+    'body': "NORMSDST($1value,output)"
+    'description': "Calculate Normal Distributions"
+  'NORMSINV':
+    'prefix': "NORMSINV"
+    'body': "NORMSINV($1value,output)"
+    'description': "Calculate Normal Distributions"
+  'OVRLAY':
+    'prefix': "OVRLAY"
+    'body': "OVRLAY($1base, baselen, substring, sublen, position, outfield)"
+    'description': "Overlay a Character String"
+  'PARAG':
+    'prefix': "PARAG"
+    'body': "PARAG($1inlen, infield, delim, subsize, outfield)"
+    'description': "Divide Text Into Smaller Lines"
+  'PCKOUT':
+    'prefix': "PCKOUT"
+    'body': "PCKOUT($1infield, outlength, outfield)"
+    'description': "Write a Packed Number of Variable Length"
+  'POSIT':
+    'prefix': "POSIT"
+    'body': "POSIT($1parent, inlength, substring, sublength, outfield)"
+    'description': "Find the Begining of a Substring"
+  'POSITV':
+    'prefix': "POSITV"
+    'body': "POSITV($1source_string, upper_limit, substring, sub_limit, output)"
+    'description': "Find the Begining of a Variable Length Substring"
+  'PRDNOR':
+    'prefix': "PRDNOR"
+    'body': "PRDNOR($1seed,output)"
+    'description': "Generate Reproducible Random Numbers"
+  'PRDUNI':
+    'prefix': "PRDUNI"
+    'body': "PRDUNI($1seed,output)"
+    'description': "Generate Reproducible Random Numbers"
+  'PTOA':
+    'prefix': "PTOA"
+    'body': "PTOA($1input,output)"
+    'description': "Convert a Packed,Decimal Number to Alphanumeric Format"
+  'PUTCOOKI':
+    'prefix': "PUTCOOKI"
+    'body': "PUTCOOKI($1'cookie_name', 'cookie_value')"
+    'description': "Submit a Value to a Browser Cookie"
+  'PUTDDREC':
+    'prefix': "PUTDDREC"
+    'body': "PUTDDREC($1ddname, dd_len, record_string, record_len, output)"
+    'description': "Write a Character String as a Record in a Sequential File"
+  'QUARTER':
+    'prefix': "QUARTER"
+    'body': "QUARTER($1date)"
+    'description': "Determine the Quarter for a Date"
+  'RDNORM':
+    'prefix': "RDNORM"
+    'body': "RDNORM($1output)"
+    'description': "Generate Random Numbers"
+  'RDUNIF':
+    'prefix': "RDUNIF"
+    'body': "RDUNIF($1output)"
+    'description': "Generate Random Numbers"
+  'REVERSE':
+    'prefix': "REVERSE"
+    'body': "REVERSE($1length, input, output)"
+    'description': "Reverse the Characters in a String"
+  'RJUST':
+    'prefix': "RJUST"
+    'body': "RJUST($1inlength, infield, outfield)"
+    'description': "Right-Justify a Character String"
+  'SETMDY':
+    'prefix': "SETMDY"
+    'body': "SETMDY($1DateVar, month- day- year)"
+    'description': "Set a Value to a Date"
+  'SLEEP':
+    'prefix': "SLEEP"
+    'body': "SLEEP($1delay, output);"
+    'description': "Suspend Execution for a Given Number of Seconds"
+  'SOUNDEX':
+    'prefix': "SOUNDEX"
+    'body': "SOUNDEX($1inlength, infield, outfield)"
+    'description': "Compare Character Strings Phonetically"
+  'SPELLNM':
+    'prefix': "SPELLNM"
+    'body': "SPELLNM($1outlength, number, output)"
+    'description': "Spell Out a Dollar Amount"
+  'SQRT':
+    'prefix': "SQRT"
+    'body': "SQRT($1input_value)"
+    'description': "Calculate the Square Root"
+  'SQUEEZ':
+    'prefix': "SQUEEZ"
+    'body': "SQUEEZ($1length, source_string, output)"
+    'description': "Reduce Multiple Spaces to a Single Space"
+  'STRIP':
+    'prefix': "STRIP"
+    'body': "STRIP($1length, source_string, char, output)"
+    'description': "Remove a Character From a String"
+  'STRREP':
+    'prefix': "STRREP"
+    'body': "STRREP($1inlength, instring, searchlength, searchstring, replength, repstring, outlength, output)"
+    'description': "Replace Character Strings"
+  'SUB':
+    'prefix': "SUB"
+    'body': "SUB($1date,value)"
+    'description': "Subtract a Value From a Date"
+  'SUBSTR':
+    'prefix': "SUBSTR"
+    'body': "SUBSTR($1inlength, parent, start, end, sublength, outfield)"
+    'description': "Extract a Substring"
+  'SUBSTV':
+    'prefix': "SUBSTV"
+    'body': "SUBSTV($1length, source_string, start, sub_limit, output)"
+    'description': "Extract a Variable Length Substring"
+  'TIMETOTS':
+    'prefix': "TIMETOTS"
+    'body': "TIMETOTS($1time, length, output)"
+    'description': "Convert a Time to a Timestamp"
+  'TODAY':
+    'prefix': "TODAY"
+    'body': "TODAY($1outfield)"
+    'description': "Return the Current Date"
+  'TRIM':
+    'prefix': "TRIM"
+    'body': "TRIM($1trim_where, source_string, length, pattern, sublength, output)"
+    'description': "Remove Lead and Trail Occurrences"
+  'TRIMV':
+    'prefix': "TRIMV"
+    'body': "TRIMV($1trim_where, source_string, length,  pattern, pattern_limit, output)"
+    'description': "Remove Characters From a String"
+  'TSTOPACK':
+    'prefix': "TSTOPACK"
+    'body': "TSTOPACK($1input,output)"
+    'description': "Convert an MSSQL or Sybase Timestamp Column to Packed Decimal"
+  'UFMT':
+    'prefix': "UFMT"
+    'body': "UFMT($1infield, inlength, outfield)"
+    'description': "Convert an Alphanumeric String to Hexadecimal"
+  'UPCASE':
+    'prefix': "UPCASE"
+    'body': "UPCASE($1length, input, output)"
+    'description': "Convert Text to Uppercase"
+  'UPCASV':
+    'prefix': "UPCASV"
+    'body': "UPCASV($1length, source_string, output)"
+    'description': "Create a Variable Length Uppercase String"
+  'WEEKDAY':
+    'prefix': "WEEKDAY"
+    'body': "WEEKDAY($1date)"
+    'description': "Determine the Day of the Week"
+  'XIRR':
+    'prefix': "XIRR"
+    'body': "XIRR($1cashflow, dates,guess, maxiterations, output)"
+    'description': "Calculate the Modified Internal Return Rate - Periodic or Non-Periodic"
+  'XTPACK':
+    'prefix': "XTPACK"
+    'body': "XTPACK($1input,output)"
+    'description': "Write a Packed Number With Up to 31 Significant Digits to an Output File"
+  'YEAR':
+    'prefix': "YEAR"
+    'body': "YEAR($1date)"
+    'description': "Extract the Year"
+  'YM':
+    'prefix': "YM"
+    'body': "YM($1fromdate, todate, outfield)"
+    'description': "Calculate Elapsed Months"
+  'YMD':
+    'prefix': "YMD"
+    'body': "YMD($1begin, end)"
+    'description': "Calculate the Difference Between Two Dates"
+  'HEADING':
+    'description':'Page Heading'
+    'prefix': 'heading'
+    'body': '\tHEADING\n"$1"\n'
+  'FOOTING':
+    'description':'Page Footing'
+    'prefix': 'footing'
+    'body': '\tFOOTING\n"$1"\n'
+  'SUBHEAD':
+    'description':'Subheader'
+    'prefix': 'subhead'
+    'body': '\tSUBHEAD\n"$1"\n'
+  'ON TABLE SUBHEAD':
+    'description':'Report heading'
+    'prefix': 'on table subhead'
+    'body': '\tON TABLE SUBHEAD\n"$1"\n'
+  'SUBFOOT':
+    'description': 'Subfooter'
+    'prefix': 'subfoot'
+    'body': '\tSUBFOOT\n"$1"\n'
+  'ON TABLE SUBFOOT':
+    'description':'Report footing'
+    'prefix': 'on table subfoot'
+    'body': '\tON TABLE SUBFOOT\n"$1"\n'
+  'DEFINE FILE':
+    'description':'Detail calculation'
+    'prefix': 'DEFINE'
+    'body': 'DEFINE FILE $1'
+  'TABLE FILE':
+    'description':'WebFOCUS Report'
+    'prefix': 'table'
+    'body': 'TABLE FILE $1'
+  'GRAPH FILE':
+    'description':'WebFOCUS Chart'
+    'prefix': 'graph'
+    'body': 'GRAPH FILE $1'
+  'MATCH FILE ... END':
+    'description':'Merge template with hold'
+    'prefix': 'MATCH'
+    'body': """
+        MATCH FILE $1
+
+        RUN
+        FILE $2
+
+          AFTER MATCH HOLD OLD-OR-NEW AS
+        END
+        """
+  'TABLE FILE ... END':
+    'description':'WebFOCUS report template with styling'
+    'prefix': 'table'
+    'body': """
+      TABLE FILE $1
+      -* Summary Aggregation
+        SUM *
+      -* Detail
+      -* PRINT
+      -* Sort/Group/Crosstab
+      -*  BY $2
+      -*  ACROSS $3
+      -* Filter
+        IF RECORDLIMIT EQ 10
+      -* Output settings
+        ON TABLE SET HTMLCSS ON
+        ON TABLE SET PAGE NOPAGE
+        ON TABLE SET LINES 999
+        ON TABLE SET STYLE *
+          units        = pts,
+          leftmargin   = 18,
+          rightmargin  = 18,
+          topmargin    = 18,
+          bottommargin = 18,
+          squeeze      = on,
+          orientation  = portrait,
+          $
+      -*    graphtype   = data,
+      -*    column      = n5,
+      -*    graphcolor  = 'teal',
+          $
+          type = report,
+            grid      = off,
+            font      = 'Calibri',
+            size      = 9,
+            color     = 'black',
+            style     = normal,
+            bottomgap = 2,
+          $
+          type = data,
+            backcolor = 'white',
+          $
+          type = title,
+            style = bold,
+          $
+          type = heading,
+          backcolor = 'white' rgb(245 245 245),
+          $
+        ENDSTYLE
+      END
+
+      """

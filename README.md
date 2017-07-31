@@ -1,5 +1,5 @@
 # WebFOCUS language support in atom-text-editor
-Adds syntax highlighting and snippets to HTML files in Atom
+Adds syntax highlighting and snippets to .fex and .mas files in Atom
 
 ## Components included:
 1.  Code autocomplete templates for language and functions.
